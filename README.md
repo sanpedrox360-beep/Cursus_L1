@@ -2,6 +2,6 @@
 
 Ceci résume mon parcours en programmation en L1
 Mon nom : ADJOH Koffi San-Pédro
-Age : 17
+Age : 17 ans
 
----
+^-^
