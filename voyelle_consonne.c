@@ -19,4 +19,9 @@ int main()
     }
 
     return 0;
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
+
+    getchar();
 }
