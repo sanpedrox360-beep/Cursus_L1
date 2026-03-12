@@ -36,22 +36,21 @@ int main(void)
 
     int etu_sup_10 = 0;
     double min, max;
-    min = notes[0][0];
-    max = notes[0][0];
+    min = moyennes[0];
+    max = moyennes[0];
 
     for (int i = 0; i < NB_ETUDIANTS; i++)
     {
         printf("Notes de l'etudiant %d : ", i + 1);
         for (int j = 0; j < NB_MATIERES; j++)
-        {
-            if (min > notes[i][j])
-                min = notes[i][j];
-
-            if (max < notes[i][j])
-                max = notes[i][j];
-
             printf("%.2lf ", notes[i][j]);
-        }
+
+        if (min > moyennes[i])
+            min = moyennes[i];
+
+        if (max < moyennes[i])
+            max = moyennes[i];
+
         if (moyennes[i] >= 10)
             etu_sup_10 += 1;
         printf("\nMoyenne de l'étudiant %d : ", i + 1);
@@ -68,6 +67,6 @@ int main(void)
     moy_generale = somme_moy / NB_ETUDIANTS;
     printf("La moyenne générale de ces étudiants est : %.2lf\n", moy_generale);
     printf("Le nombre d'etudiants qui ont une moyenne >= 10 est : %d\n", etu_sup_10);
-    printf("La note minimale est : %.2lf\n", min);
-    printf("La note maximale est : %.2lf\n", max);
+    printf("La moyenne la plus forte est : %.2lf\n", max);
+    printf("La moyenne la plus faible est : %.2lf\n", min);
 }
